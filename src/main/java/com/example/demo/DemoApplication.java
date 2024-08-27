@@ -30,7 +30,7 @@ class HelloController {
     String projectId = ServiceOptions.getDefaultProjectId();
 
     @GetMapping("/")
-    public String getFacts(@RequestParam(defaultValue = "dog") String animal) throws IOException {
+    public String getFacts(@RequestParam(defaultValue = "cat") String animal) throws IOException {
         String prompt = "Give me 10 fun facts about " + animal + ". Return this as html without backticks.";
 
         VertexAI vertexAI = new VertexAI(projectId, null);
